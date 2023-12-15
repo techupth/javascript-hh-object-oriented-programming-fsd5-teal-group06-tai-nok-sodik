@@ -18,7 +18,7 @@ class Postlist {
   }
 }
 class Post {
-  constructor(id, title, content, comment) {
+  constructor(id, title, content) {
     this.id = id;
     this.title = title;
     this.content = content;
@@ -40,7 +40,7 @@ class Comment {
   }
 }
 class Facebook {
-  constructor(groupList, pageList) {
+  constructor() {
     this.groupList = [];
     this.pageList = [];
   }
