@@ -7,7 +7,7 @@ class User {
     }
 }
 
-class postList {
+class PostList {
     constructor(posts) {
         this.posts = posts;
     }
@@ -15,8 +15,8 @@ class postList {
         this.posts = posts;
         this.posts.push(posts);
     }
-    sharePost() {
-        console.log(`You've shared post ${post-title>} to your friend.`);
+    sharePost(title,) {
+        console.log(`You've shared post ${title} to your friend.`);
     }
 }
 
@@ -32,42 +32,28 @@ class Post {
         this.comment.push(comment);
     }
 }
-
-class Post {
-    constructor(id, title, content, comment) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.comment = comment;
-    }
-    addComment(comment) {
-        this.comment = comment;
-        this.comment.push(comment);
-    }
-}
-
 class Comment {
     constructor(id, content, createdBy, like) {
         this.id = id;
         this.content = content;
         this.createdBy = createdBy;
-        this.like = like;
+        this.like = 0;
     }
     addLike(like) {
-        this.like += like;
+        this.like += 1;
     }
 }
 
 class Facebook {
     constructor(groupList, pageList) {
-        this.groupList = groupList;
-        this.pageList = pageList;
+        this.groupList = [];
+        this.pageList = [];
     }
     addGroup(groupList) {
-        this.groupList += groupList;
+        this.groupList.push(groupList);
     }
     addPage(pageList) {
-        this.pageList += pageList;
+        this.pageList.push(pageList);
     }
 }
 
@@ -88,7 +74,19 @@ class Notification {
         this.id = id;
     }
 
-    send() {
-        console.log(`Notification: ${comment-createdBy} has just commented on this post—${post-title}`)
+    send(createdBy,title) {
+        console.log(`Notification: ${createdBy} has just commented on this post— ${title}`)
     }
 }
+
+const like = new Comment("01","push", "Mark Zuck");
+like.addLike();
+like.addLike();
+console.log(like.like)
+const fb = new Facebook();
+fb.addGroup("18+");
+fb.addGroup("25+");
+console.log(fb.groupList)
+
+const test = new Notification("01")
+test.send("nok", 123)
