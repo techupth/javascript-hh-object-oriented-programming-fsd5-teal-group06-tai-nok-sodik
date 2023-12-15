@@ -22,6 +22,10 @@ class SMSNotification extends Notification {
   }
 }
 
-const emailRecei = new Notification(555, 12.31, "otw", "Tai1");
+const emailRecei = new EmailNotification(555, 12.31, "otw", "Tai1");
 //console.log(emailRecei)
 emailRecei.send();
+
+const emailRecei2 = new SMSNotification(555, 12.31, "otw", "55555");
+//console.log(emailRecei)
+emailRecei2.send();
