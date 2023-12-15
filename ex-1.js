@@ -6,7 +6,7 @@ class EmailNotification {
         this.receiver = receiver;
     }
 
-    send() {
+    send(receiver) {
         console.log(`Notification has been sent to ${this.receiver}`)
     }
 }
@@ -19,7 +19,7 @@ class SMSNotification {
         this.phoneNumber = phoneNumber;
     }
 
-    send() {
+    send(phoneNumber) {
         console.log(`Notification has been sent to ${this.phoneNumber}`)
     }
 }

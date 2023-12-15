@@ -16,7 +16,7 @@ class PostList {
         this.posts.push(posts);
     }
     sharePost(title,) {
-        console.log(`You've shared post ${title} to your friend.`);
+        console.log(`You've shared post ${this.title} to your friend.`);
     }
 }
 
@@ -75,18 +75,18 @@ class Notification {
     }
 
     send(createdBy,title) {
-        console.log(`Notification: ${createdBy} has just commented on this post— ${title}`)
+        console.log(`Notification: ${this.createdBy} has just commented on this post— ${this.title}`)
     }
 }
 
-const like = new Comment("01","push", "Mark Zuck");
-like.addLike();
-like.addLike();
-console.log(like.like)
-const fb = new Facebook();
-fb.addGroup("18+");
-fb.addGroup("25+");
-console.log(fb.groupList)
+// const like = new Comment("01","push", "Mark Zuck");
+// like.addLike();
+// like.addLike();
+// console.log(like.like)
+// const fb = new Facebook();
+// fb.addGroup("18+");
+// fb.addGroup("25+");
+// console.log(fb.groupList)
 
 const test = new Notification("01")
 test.send("nok", 123)

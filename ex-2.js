@@ -6,7 +6,7 @@ class Notification {
         this.receiver = receiver;
     }
 
-    send() {
+    send(receiver) {
         console.log(`Notification has been sent to ${this.receiver}`)
     }
 }
@@ -21,9 +21,6 @@ class SMSNotification extends Notification {
     constructor(notificationId, createdTime, content, receiver) {
         super(notificationId, createdTime, content, receiver)
     }
-
-    // send() {
-    // }
 }
 
 let objEmail = new EmailNotification("1", "11.00", "Test", "nok");
