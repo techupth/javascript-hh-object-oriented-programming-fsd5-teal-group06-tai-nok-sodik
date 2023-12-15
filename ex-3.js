@@ -22,7 +22,7 @@ class Post {
     this.id = id;
     this.title = title;
     this.content = content;
-    this.comment = [comment];
+    this.comment = [];
   }
   addComment(comment) {
     this.comment.push(comment);
@@ -41,8 +41,8 @@ class Comment {
 }
 class Facebook {
   constructor(groupList, pageList) {
-    this.groupList = [groupList];
-    this.pageList = [pageList];
+    this.groupList = [];
+    this.pageList = [];
   }
   addGroup(add1) {
     this.groupList.push(add1);
